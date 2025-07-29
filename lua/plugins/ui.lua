@@ -5,7 +5,30 @@ return {
     dependencies = {
       'nvim-tree/nvim-web-devicons',
     },
-    opts = {},
+    opts = {
+      options = {
+        theme = "base2tone_lavender_dark",
+      },
+      sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_c = { "filename" },
+        lualine_x = {},
+        lualine_y = { "fileformat", "filetype", "progress" },
+        lualine_z = { "location" },
+      },
+      winbar = {
+        lualine_a = {
+          "filename"
+        },
+        lualine_b = {
+          "location"
+        },
+        lualine_c = {
+          "lsp_status"
+        },
+      },
+    },
   },
 
   {
