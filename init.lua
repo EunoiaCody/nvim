@@ -13,8 +13,15 @@ vim.opt.smartindent = true
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
 -- For Language
 vim.cmd("language en_GB.UTF-8") -- 设置语言为英语
+
+-- neovide fontsize
+if vim.g.neovide then
+  vim.keymap.set({ "n", "v" }, "<C-ScrollWheelUp>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
+  vim.keymap.set({ "n", "v" }, "<C-ScrollWheelDown>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
+end
 
 -- lazy.nvim
 require("config.lazy") -- 使用 lazy.nvim 作为 neovim 的插件管理器
