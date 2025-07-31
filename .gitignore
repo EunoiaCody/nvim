@@ -36,3 +36,4 @@ Temporary Items
 *.vsix
 
 lazy-lock.json
+package-lock.json
