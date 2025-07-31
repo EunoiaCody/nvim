@@ -2,7 +2,8 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-Icon[]
+Icon[
+]
 
 # Thumbnails
 ._*
@@ -33,3 +34,5 @@ Temporary Items
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+lazy-lock.json
