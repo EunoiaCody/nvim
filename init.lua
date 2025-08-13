@@ -15,7 +15,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- For Language
-vim.cmd("language en_GB.UTF-8") -- 设置语言为英语
+vim.cmd("language en_US.UTF-8") -- 设置语言为英语
 
 -- neovide fontsize
 if vim.g.neovide then
