@@ -35,5 +35,5 @@ Temporary Items
 # Built Visual Studio Code Extensions
 *.vsix
 
-lazy-lock.json
 package-lock.json
+lazy-lock.json
