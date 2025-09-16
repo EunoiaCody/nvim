@@ -6,7 +6,6 @@ vim.opt.list = true -- 高亮当前选中的行
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.optshiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
