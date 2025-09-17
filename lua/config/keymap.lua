@@ -24,3 +24,9 @@ map("n", "<leader>l", "<CMD>Lazy<CR>", { desc = "[Lazy] Open lazy.nvim" })
 -- Nvim Tree
 map("n", "<leader>nto", "<CMD>NvimTreeOpen<CR>", { desc = "打开 Nvim Tree" }) -- 打开 nvim-tree.nvim
 map("n", "<leader>ntc", "<CMD>NvimTreeClose<CR>", { desc = "关闭 Nvim Tree" }) -- 关闭 nvim-tree.nvim
+
+-- 复制粘贴
+map("v", "<ctrl>C", "\"+y", { desc = "复制到系统剪贴板" })
+map("x", "<ctrl>C", "\"+yy", { desc = "复制到系统剪贴板" })
+map("v", "<ctrl>V", "\"+p", { desc = "粘贴自系统剪贴板"})
+map("x", "<ctrl>V", "\"+pp", { desc = "粘贴自系统剪贴板"})
