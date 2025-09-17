@@ -56,4 +56,3 @@ require("noice").setup({
   },
 })
 
-vim.keymap.set("n", "<leader>L", "<CMD>Lazy<CR>", { desc = "[Lazy] Open lazy.nvim" })

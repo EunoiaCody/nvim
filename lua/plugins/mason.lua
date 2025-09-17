@@ -2,7 +2,15 @@ return {
 
 {
     "mason-org/mason.nvim",
-    opts = {}
+    opts = {
+      ui = {
+        icon = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗"
+        }
+      }
+    }
 }
 
 }
