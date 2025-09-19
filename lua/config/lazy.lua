@@ -35,7 +35,8 @@ require("lazy").setup({
   ui = {
     border = "rounded",
   }
-})
+
+  })
 
 require("noice").setup({
   lsp = {
@@ -55,4 +56,5 @@ require("noice").setup({
     lsp_doc_border = false,       -- add a border to hover docs and signature help
   },
 })
+
 

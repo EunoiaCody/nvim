@@ -1,6 +1,10 @@
 return {
   "sphamba/smear-cursor.nvim",
 
+  cond = function()
+    return not vim.g.neovide -- 当neovide不在运行时才会使用这个插件
+  end,
+
   opts = {
     -- Smear cursor when switching buffers or windows.
     smear_between_buffers = true,
