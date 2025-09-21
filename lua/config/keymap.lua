@@ -30,3 +30,8 @@ map("v", "<ctrl>C", "\"+y", { desc = "复制到系统剪贴板" })
 map("x", "<ctrl>C", "\"+yy", { desc = "复制到系统剪贴板" })
 map("v", "<ctrl>V", "\"+p", { desc = "粘贴自系统剪贴板"})
 map("x", "<ctrl>V", "\"+pp", { desc = "粘贴自系统剪贴板"})
+
+-- 打开 Copilot Chat 
+map("n", "<leader>coc", "<CMD>CodeCompanionChat<CR>", { desc = "打开 Copilot Chat" })
+
+map("n", "<leader>C", "<cmd>MonokaiProSelect<cr>", { desc = "Select Monokai pro filter" })

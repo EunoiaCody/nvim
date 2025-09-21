@@ -16,3 +16,7 @@ vim.g.loaded_netrwPlugin = 1
 -- vim.cmd("language en_US.UTF-8") -- 设置语言为英语
 
 vim.g.mapleader = ' ' -- 设置为<leader> 为 ' '
+
+opt.splitbelow = true -- 水平分割窗口时在下方
+opt.splitright = true -- 垂直分割窗口时在右侧
+

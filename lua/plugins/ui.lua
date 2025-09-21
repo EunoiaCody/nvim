@@ -1,13 +1,27 @@
 return {
 
   {
+    "nvim-tree/nvim-web-devicons",
+    opts = {
+      override = {
+        copilot = {
+          icon = "",
+          color = "#8A2BE2", -- Catppuccin.mocha.mauve
+          name = "Copilot",
+        },
+      },
+    },
+  },
+
+  {
     'nvim-lualine/lualine.nvim',
     dependencies = {
       'nvim-tree/nvim-web-devicons',
+      "AndreM222/copilot-lualine",
     },
     opts = {
       options = {
-        theme = "base2tone_lavender_dark",
+        theme = "auto",
       },
       sections = {
         lualine_a = { "mode" },
@@ -29,6 +43,28 @@ return {
         },
       },
     },
+--    config = function(_, opts)
+--      local copilot = {
+--        "copilot",
+--        show_colors = true,
+--        symbols = {
+--          status = {
+--            hl = {
+--              enabled = mocha.green,
+--              sleep = mocha.overlay0,
+--              disabled = mocha.surface0,
+--              warning = mocha.peach,
+--              unknown = mocha.red,
+--            },
+--          },
+--          spinner_color = mocha.mauve,
+--        },
+--      }
+--
+--      table.insert(opts.sections.lualine_c, copilot)
+--
+--      require("lualine").setup(opts)
+--    end,
   },
 
   {
@@ -81,6 +117,27 @@ return {
       "rcarriga/nvim-notify",
       "hrsh7th/nvim-cmp",
     },
+
+    config = function ()
+      require("noice").setup({
+        lsp = {
+          -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+          override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+            ["vim.lsp.util.stylize_markdown"] = true,
+            ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+          },
+        },
+        -- you can enable a preset for easier configuration
+        presets = {
+          bottom_search = true,         -- use a classic bottom cmdline for search
+          command_palette = true,       -- position the cmdline and popupmenu together
+          long_message_to_split = true, -- long messages will be sent to a split
+          inc_rename = false,           -- enables an input dialog for inc-rename.nvim
+          lsp_doc_border = false,       -- add a border to hover docs and signature help
+        },
+      })
+    end
 
   },
 
